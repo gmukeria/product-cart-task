@@ -3,7 +3,7 @@
 
 Laravel-ზე აწყობილი პროდუქტების კალათაში დამატება, რაოდენობის განახლება და წაშლა
 
-![Application Screenshot](public/cart-products.png)
+![Application Screenshot](public/cart-products-2.png)
 
 
 ## ინსტალაცია
