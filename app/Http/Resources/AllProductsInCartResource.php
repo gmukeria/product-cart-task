@@ -1,8 +1,6 @@
 <?php
 namespace App\Http\Resources;
 
-use App\Services\CartService;
-use App\Services\ProductGroupService;
 use Illuminate\Http\Resources\Json\ResourceCollection;
 
 class AllProductsInCartResource extends ResourceCollection
@@ -23,16 +21,8 @@ class AllProductsInCartResource extends ResourceCollection
      */
     public function toArray($request): array
     {
-//        $cartService = new CartService();
-//        $productGroupService = new ProductGroupService();
-
-//        $productGroup = $productGroupService->getProductGroup(1);
-//        $groupItems = $productGroupService->getProductGroupItems(1);
-//
-//        $priceData = $cartService->calculatePrice($this->collection, $productGroup, $groupItems);
-
         return [
-            'products' => CartProductResource::collection($this->collection),
+            'items'    => CartProductResource::collection($this->collection),
             'total'    => $this->priceData['total'],
             'discount' => $this->priceData['discount'],
             'subtotal' => $this->priceData['subtotal']
